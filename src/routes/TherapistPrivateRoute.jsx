@@ -9,6 +9,9 @@ const TherapistPrivateRoute = ({ children }) => {
   const [decodedToken, setDecodedToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const cookieToken = Cookies.get("token");
+  console.log("cookieToekn is 1", cookieToken);
+
   useEffect(() => {
     const cookieToken = Cookies.get("token");
     console.log("cookieToekn is", cookieToken);
