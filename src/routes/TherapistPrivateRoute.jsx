@@ -11,7 +11,7 @@ const TherapistPrivateRoute = ({ children }) => {
 
   useEffect(() => {
     const cookieToken = Cookies.get("token");
-    console.log(cookieToken);
+    console.log("cookieToekn is", cookieToken);
     if (cookieToken) {
       const decoded = decodeToken(cookieToken);
       setDecodedToken(decoded);
