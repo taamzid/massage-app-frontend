@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
-import swiperImg from "../../../assets/images/loginBg.png";
+import swiperImg from "../../../assets/images/loginBG.png";
 const AuthSwiper = () => {
     const images = [swiperImg, swiperImg, swiperImg];
     return (
