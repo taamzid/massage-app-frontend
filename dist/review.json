@@ -1,0 +1,60 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "image": "../src/assets/images/image 116.png",
+            "agent": "John Doe",
+            "address": "123 Elm Street, New York",
+            "review": "Great service! I had an amazing experience with Healing Bodywork. The therapist was highly skilled and attentive to my needs. I left feeling rejuvenated and relaxed.",
+            "service": "Healing Bodywork"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "image": "https://i.ibb.co/L1QJKjn/image-116.png",
+            "agent": "Jane Smith",
+            "address": "123 Elm Street, New York",
+            "review": "Excellent work! The electrical service provided by Jane was top-notch. She quickly resolved the issue and ensured everything was working perfectly. I highly recommend her services.",
+            "service": "Electrical"
+        },
+        {
+            "id": 3,
+            "name": "Mike Johnson",
+            "image": "../src/assets/images/image 116 (4).png",
+            "agent": "Mike Johnson",
+            "address": "123 Elm Street, New York",
+            "review": "Highly recommended! Mike from HVAC did an outstanding job. He was professional, knowledgeable, and efficient. I am extremely satisfied with the service provided.",
+            "service": "HVAC"
+        },
+        {
+            "id": 4,
+            "name": "Sarah Williams",
+            "image": "../src/assets/images/image 116 (5).png",
+            "agent": "Sarah Williams",
+            "address": "123 Elm Street, New York",
+            "review": "Very professional! Sarah and her team did an excellent job with the roofing project. They were punctual, skilled, and completed the work to a high standard. I would definitely hire them again.",
+            "service": "Roofing"
+        },
+        {
+            "id": 5,
+            "name": "David Brown",
+            "image": "../src/assets/images/image 116 (4).png",
+            "agent": "David Brown",
+            "address": "123 Elm Street, New York",
+            "review": "Prompt and reliable! David provided exceptional landscaping services. He understood my vision and transformed my outdoor space beautifully. I highly recommend his services.",
+            "service": "Landscaping"
+        },
+        {
+            "id": 6,
+            "name": "Emily Davis",
+            "image": "../src/assets/images/image 116 (5).png",
+            "agent": "Emily Davis",
+            "address": "987 Maple St",
+            "review": "Great attention to detail! Emily is a talented painter who pays great attention to detail. She transformed my walls with precision and skill. I am extremely happy with the results.",
+            "service": "Painting"
+        }
+        
+    ]
+}
+    

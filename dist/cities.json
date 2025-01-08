@@ -1,0 +1,88 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "name": "Atlanta, GA"
+        },
+        {
+            "id": 2,
+            "name": "Indianapolis, IN"
+        },
+        {
+            "id": 3,
+            "name": "Philadelphia, PA"
+        },
+        {
+            "id": 4,
+            "name": "Boston, MA"
+        },
+        {
+            "id": 5,
+            "name": "Jacksonville, FL"
+        },
+        {
+            "id": 6,
+            "name": "Queens, NY"
+        },
+        {
+            "id": 7,
+            "name": "Chicago, IL"
+        },
+        {
+            "id": 8,
+            "name": "Kansas City, MO"
+        },
+        {
+            "id": 9,
+            "name": "Raleigh, NC"
+        },
+        {
+            "id": 10,
+            "name": "Chicago, IL"
+        },
+        {
+            "id": 11,
+            "name": "Los Angeles, CA"
+        },
+        {
+            "id": 12,
+            "name": "San Antonio, TX"
+        },
+        {
+            "id": 13,
+            "name": "El Paso, TX"
+        },
+        {
+            "id": 14,
+            "name": "Miami, FL"
+        },
+        {
+            "id": 15,
+            "name": "Tucson, AZ"
+        },
+        {
+            "id": 16,
+            "name": "Fresno, CA"
+        },
+        {
+            "id": 17,
+            "name": "Nashville, TN"
+        },
+        {
+            "id": 18,
+            "name": "Upland, CA"
+        },
+        {
+            "id": 19,
+            "name": "Houston, TX"
+        },
+        {
+            "id": 20,
+            "name": "Oklahoma City, OK"
+        },
+        {
+            "id": 21,
+            "name": "Washington, D.C."
+        }
+    ]
+}
