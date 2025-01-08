@@ -1,78 +1,58 @@
-// Function to get a cookie value by name
 export const getCookie = (name) => {
   const cookies = document.cookie
     .split("; ")
     .find((row) => row.startsWith(`${name}=`));
-
-  return cookies ? cookies.split("=")[1] : null;
+  return cookies ? decodeURIComponent(cookies.split("=")[1]) : null;
 };
 
-// Function to set a cookie
-export const setCookie = (name, value, days) => {
+export const setCookie = (name, value, days, options = {}) => {
+  if (typeof name !== "string" || typeof value !== "string" || typeof days !== "number") {
+    throw new Error("Invalid input: name and value should be strings, days should be a number");
+  }
+
   const date = new Date();
   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
   const expires = `expires=${date.toUTCString()}`;
-  document.cookie = `${name}=${value};${expires};path=/`;
+  const secure = options.secure ? "; Secure" : "";
+  const sameSite = options.sameSite || "Lax";
+  document.cookie = `${name}=${encodeURIComponent(value)};${expires};path=/; SameSite=${sameSite}${secure}`;
 };
 
-// Function to delete a cookie
 export const deleteCookie = (name) => {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 };
 
-// Function to check if a cookie exists
-
-export const checkCookie = (name) => {
-  return document.cookie.split("; ").find((row) => row.startsWith(`${name}=`));
-};
-
-// Function to get all cookies
 export const getAllCookies = () => {
-  return document.cookie.split("; ").map((row) => {
+  return document.cookie.split("; ").reduce((acc, row) => {
     const [key, value] = row.split("=");
-    return { key, value };
-  });
+    acc[key] = decodeURIComponent(value);
+    return acc;
+  }, {});
 };
 
-// Function to delete all cookies
 export const deleteAllCookies = () => {
   document.cookie.split("; ").forEach((row) => {
     const [key] = row.split("=");
-    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    deleteCookie(key);
   });
 };
 
-// Function to set multiple cookies
-
-export const setMultipleCookies = (cookies) => {
-  cookies.forEach((cookie) => {
-    const { name, value, days } = cookie;
-    setCookie(name, value, days);
-  });
+export const updateCookie = (name, newValue, days, options = {}) => {
+  if (getCookie(name) !== null) {
+    setCookie(name, newValue, days, options);
+  } else {
+    console.warn(`Cookie with name "${name}" does not exist`);
+  }
 };
 
-// Function to get multiple cookies
-export const getMultipleCookies = (cookies) => {
-  return cookies.map((cookie) => {
-    const { name } = cookie;
-    return getCookie(name);
-  });
+export const isCookieExpired = (name) => {
+  const cookie = getCookie(name);
+  return cookie === null;
 };
 
-// Function to delete multiple cookies
-export const deleteMultipleCookies = (cookies) => {
-  cookies.forEach((cookie) => {
-    const { name } = cookie;
-    deleteCookie(name);
+export const parseCookies = () => {
+  return document.cookie.split("; ").map((row) => {
+    const [key, ...rest] = row.split("=");
+    return { name: key, value: decodeURIComponent(rest.join("=")) };
   });
 };
-
-// Function to check if multiple cookies exist
-export const checkMultipleCookies = (cookies) => {
-  return cookies.map((cookie) => {
-    const { name } = cookie;
-    return checkCookie(name);
-  });
-};
-
-// Function to get all cookies
