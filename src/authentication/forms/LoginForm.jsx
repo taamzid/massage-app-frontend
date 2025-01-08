@@ -38,7 +38,7 @@ const LoginForm = () => {
       }
 
       const res = await axios.post(
-        "http://localhost:8800/api/auth/login",
+        "https://massage-app-backend.onrender.com/api/auth/login",
         {
           email,
           password,
