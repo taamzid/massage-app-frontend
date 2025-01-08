@@ -12,8 +12,8 @@ export const setCookie = (name, value, days) => {
   const date = new Date();
   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
   const expires = `expires=${date.toUTCString()}`;
-  const secure = location.protocol === "https:" ? "Secure;" : "";
-  document.cookie = `${name}=${value};${expires};path=/;${secure}`;
+  const domain = `domain=${window.location.hostname};`;
+  document.cookie = `${name}=${value};${expires};path=/;${domain}`;
 };
 
 // Function to delete a cookie
